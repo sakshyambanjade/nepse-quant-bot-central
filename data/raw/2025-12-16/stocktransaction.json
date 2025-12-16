@@ -1,0 +1,9 @@
+[
+  {
+    "timestamp": "2025-12-16T10:40:00.000Z",
+    "transactions": [
+      {"symbol": "AAPL", "ltp": "3100", "volume": "50000", "turnover": "155000000", "change": "+2.5%"},
+      {"symbol": "NABIL", "ltp": "3200", "volume": "40000", "turnover": "128000000", "change": "+1.8%"}
+    ]
+  }
+]

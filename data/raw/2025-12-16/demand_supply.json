@@ -1,0 +1,15 @@
+[
+  {
+    "timestamp": "2025-12-16T10:30:00.000Z",
+    "top_buy": [
+      {"price": "3100", "quantity": "5000"},
+      {"price": "3099", "quantity": "4500"}
+    ],
+    "top_sell": [
+      {"price": "3101", "quantity": "3000"},
+      {"price": "3102", "quantity": "2500"}
+    ],
+    "buy_orders": 150,
+    "sell_orders": 100
+  }
+]

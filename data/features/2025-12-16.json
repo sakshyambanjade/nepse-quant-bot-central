@@ -1,0 +1,16 @@
+{
+  "date": "2025-12-16",
+  "timestamp": "2025-12-16T23:08:57.044913",
+  "indicators": {
+    "buy_sell_ratio": 0.6333,
+    "order_imbalance": 0.2,
+    "total_buy_quantity": 9500,
+    "total_sell_quantity": 5500,
+    "buy_orders": 150,
+    "sell_orders": 100,
+    "momentum_signal": "NEUTRAL",
+    "top_sector": "Banking",
+    "sector_count": 2,
+    "transaction_count": 2
+  }
+}
