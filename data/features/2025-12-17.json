@@ -1,0 +1,13 @@
+{
+  "date": "2025-12-17",
+  "timestamp": "2025-12-17T12:10:21.787211",
+  "indicators": {
+    "buy_sell_ratio": 0.5,
+    "order_imbalance": 0.0
+  },
+  "counts": {
+    "demand_snapshots": 0,
+    "sector_snapshots": 1,
+    "stock_snapshots": 1
+  }
+}
