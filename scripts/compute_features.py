@@ -1,14 +1,15 @@
+# -*- coding: utf-8 -*-
 import sys
 import json
 from datetime import datetime
 from pathlib import Path
 
 def compute_features(date_str: str):
-    print(f"\n🔧 Computing features for {date_str}")
+    print(f"\n[INFO] Computing features for {date_str}")
 
     raw_dir = Path("data") / "raw" / date_str
     if not raw_dir.exists():
-        print(f"❌ No raw data directory: {raw_dir}")
+        print(f"[ERROR] No raw data directory: {raw_dir}")
         return None
 
     # load raw files if present
@@ -20,9 +21,9 @@ def compute_features(date_str: str):
     sector = json.loads(sector_file.read_text(encoding="utf-8")) if sector_file.exists() else []
     stock  = json.loads(stock_file.read_text(encoding="utf-8")) if stock_file.exists() else []
 
-    print(f"✅ demand_supply snapshots: {len(demand)}")
-    print(f"✅ sector snapshots: {len(sector)}")
-    print(f"✅ stock snapshots: {len(stock)}")
+    print(f"[OK] demand_supply snapshots: {len(demand)}")
+    print(f"[OK] sector snapshots: {len(sector)}")
+    print(f"[OK] stock snapshots: {len(stock)}")
 
     # ---- simple indicators (safe defaults) ----
     buy_qty = 0.0
@@ -63,7 +64,7 @@ def compute_features(date_str: str):
     out_file = out_dir / f"{date_str}.json"
     out_file.write_text(json.dumps(features, indent=2), encoding="utf-8")
 
-    print(f"💾 saved features -> {out_file}")
+    print(f"[SAVE] saved features -> {out_file}")
     return features
 
 if __name__ == "__main__":
