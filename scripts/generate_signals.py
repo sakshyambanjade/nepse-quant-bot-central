@@ -1,16 +1,17 @@
+# -*- coding: utf-8 -*-
 import sys
 import json
 from datetime import datetime
 from pathlib import Path
 
 def generate_signals(date_str: str):
-    print(f"🎯 Generating signals for {date_str}")
+    print(f"[INFO] Generating signals for {date_str}")
 
     f_file = Path("data") / "features" / f"{date_str}.json"
-    print(f"📂 Looking for: {f_file}")
+    print(f"[INFO] Looking for: {f_file}")
 
     if not f_file.exists():
-        print(f"❌ No features file: {f_file}")
+        print(f"[ERROR] No features file: {f_file}")
         return None
 
     feats = json.loads(f_file.read_text(encoding="utf-8"))
@@ -49,7 +50,7 @@ def generate_signals(date_str: str):
     out_file = out_dir / f"{date_str}.json"
     out_file.write_text(json.dumps(out, indent=2), encoding="utf-8")
 
-    print(f"💾 saved signals -> {out_file}")
+    print(f"[SAVE] saved signals -> {out_file}")
     print(json.dumps(out, indent=2))
     return out
 
